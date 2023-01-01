@@ -1,0 +1,145 @@
+:root{
+    --colorFondo:  #F3F5FC;
+    --colorLetra: #0A3871;
+    --colorFondoBlue: #0A3871;
+}
+
+body{
+    margin: 0 16px;
+    padding: 0;
+    background-color: var(--colorFondo);
+}
+
+/* Header */
+
+header{
+    margin: 24px;
+}
+
+/* Section Ingreso de Mensaje */
+
+textarea{
+    border: none;
+    background-color: var(--colorFondo);
+    color: var(--colorLetra);
+    font-family: 'Inter';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.informacion {
+    display: flex;
+    align-items: center;
+}
+
+.informacion span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+
+    margin: 0 8px;
+}
+
+/* Botones */
+
+.botones{
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.botones button{
+    margin: 8px auto;
+    width: 343px;
+    height: 67px;
+    border: 1px solid var(--colorFondoBlue);
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.btnEncriptar{
+    color: #FFFFFF;
+    background-color: var(--colorFondoBlue);
+}
+
+.btnDesencriptar{
+    color: var(--colorLetra);
+    background-color: var(--colorFondo);
+}
+
+/*Area Mensaje traducido*/
+
+.mensajeTraducido{
+    display: flex;
+    width: 327px;
+    height: 186px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 24px;
+    text-align: center;
+    justify-content: center;
+}
+
+.mensajeError{
+    width: 263px;
+    height: 58px;
+
+    font-weight: bold;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #343A40;
+}
+
+.mensajePrincipal{
+    width: 263px;
+    height: 48px;    
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #495057;
+}
+
+.btnCopiar{
+    display: none;
+}
+
+/* Footer */
+
+footer {
+    margin: 15px;
+}
+
+footer p{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Inter';
+    font-size: 12px;
+    color:#495057;
+    margin: 2px;
+}
+
+
+
+
+/* Media Querys */
+
+@media (max-width:768px) {
+
+    .logoError{
+        display: none;
+    }
+}
