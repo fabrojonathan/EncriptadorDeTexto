@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./css/style.css"
 </head>
 <body>
-    
+    <header>
+        <img src="./assets/Logo alura.svg" alt="Logo Alura">
+    </header>
+
+    <main>
+        <section class="ingresoMensaje">
+            <textarea name="" id="textareaMensaje" class="textareaMensaje" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+
+            <div class="informacion">
+                <img src="./assets/Logo information.svg" alt="Signo Exclamacion">
+                <span>Solo letras minúsculas y sin acentos</span>
+            </div>
+
+            <div class="botones">
+                <button id="btnEncriptar" class="btnEncriptar">Encriptar</button>
+                <button id="btbDesencriptar" class="btbDesencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="mensajeTraducido">
+            <div>
+                <img src="./assets/MuñecoLogo error not message.svg" alt="Ningun mensaje encontrado">
+
+                <p id="mensajeError" class="mensajeError">Ningún mensaje fue encontrado</p>
+
+                <p id="mensajePrincipal" class="mensajePrincipal">Ingresa el texto que desees encriptar o desencriptar</p>
+
+                <button id="btnCopiar" class="btnCopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>By Fabro Jonathan - Alumno de Alura</p>
+        <p>Formación OneOracle</p>
+    </footer>
+
+
+
+    <script href="./js/script.js"></script>
 </body>
 </html>
