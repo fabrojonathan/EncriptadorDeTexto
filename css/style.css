@@ -256,5 +256,26 @@ footer p{
 
 /*Animaciones */
 
+button{
+    transition: 0.8s;
+}
+
+.btnEncriptar:hover{
+    transition: 0.5s;
+    transform: scale(1.02);
+    background: #1d5dac;
+    border-radius: 50deg;
+    font-size: 115%;
+}
+
+.btnDesencriptar:hover ,.btnCopiar:hover{
+    transition: 0.5s;
+    transform: scale(1.02);
+    background: #c0d9fa;
+    border-radius: 50deg;
+    color:#010d1b;
+    font-size: 115%;
+}
+
 
 
