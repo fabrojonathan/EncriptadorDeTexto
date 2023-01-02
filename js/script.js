@@ -19,4 +19,30 @@ function ComprobarMensajeVacio(){
     return (textoIngresado == '');
 }
 
-btnEncriptar.addEventListener('click', Prueba);
+function encriptarTexto(texto){
+    var nuevoTexto = "";
+
+    nuevoTexto = texto
+
+    .replace(/e/g, 'enter')
+    .replace(/i/g, 'imes')
+    .replace(/a/g, 'ai')
+    .replace(/o/g, 'ober')
+    .replace(/u/g, 'ufat')
+
+    return nuevoTexto;
+}
+
+function desencriptarTexto(texto){
+    var nuevoTexto = "";
+
+    nuevoTexto = texto
+
+    .replace(/enter/g, 'e')
+    .replace(/imes/g, 'i')
+    .replace(/ai/g, 'a')
+    .replace(/ober/g, 'o')
+    .replace(/ufat/g, 'u')
+
+    return nuevoTexto;
+}
