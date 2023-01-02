@@ -136,6 +136,14 @@ textarea:focus{
     color: #495057;
 }
 
+.textoTraducido{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #495057;
+}
+
 .btnCopiar{
     display: none;
     flex-direction: row;
