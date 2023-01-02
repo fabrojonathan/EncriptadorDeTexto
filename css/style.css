@@ -137,9 +137,8 @@ textarea:focus{
 }
 
 .btnCopiar{
+    display: none;
     flex-direction: row;
-    width: 300px;
-    height: 67px;
     background-color: #FFF;
     color: var(--colorLetra);
 }
@@ -266,6 +265,3 @@ button{
     color:#010d1b;
     font-size: 115%;
 }
-
-
-
