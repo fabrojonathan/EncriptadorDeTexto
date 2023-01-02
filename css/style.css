@@ -69,7 +69,7 @@ textarea:focus{
 
 .botones button, .btnCopiar{
     margin: 8px auto;
-    width: 343px;
+    width: 300px;
     height: 67px;
     border: 1px solid var(--colorFondoBlue);
     border-radius: 24px;
@@ -138,7 +138,7 @@ textarea:focus{
 
 .btnCopiar{
     flex-direction: row;
-    width: 279px;
+    width: 300px;
     height: 67px;
     background-color: #FFF;
     color: var(--colorLetra);
@@ -186,20 +186,9 @@ footer p{
         flex-direction: row;
     }
 
-    .botones button{
-        width: 332px;
-    }
-
     .mensajeTraducido{
         width: 97%;
         height: 50vh;
-    }
-
-    .btnCopiar{
-        width: 90%;
-        height: 67px;
-        background-color: #FFF;
-        color: var(--colorLetra);
     }
 }
 
@@ -207,18 +196,17 @@ footer p{
     
     .ingresoMensaje{
         position: absolute;
-        width: 45vw;
-        height: 300px;
-        left: 10vw;
+        width: 55vw;
+        height: 50vh;
+        left: 55px;
     }
 
     .mensajeTraducido{
         position: absolute;
         top: 0;
         right: 0;
-        width: 35vw;
-        height: 83%;
-        max-height: 944px;
+        width: 30vw;
+        height: 80vh;
         margin: 40px 40px;
     }
 
@@ -227,7 +215,11 @@ footer p{
     }
 
     .botones button{
-        width: 22vw;
+        width: 45%;
+    }
+
+    .btnCopiar{
+        width: 90%;
     }
 
     footer{
@@ -243,14 +235,12 @@ footer p{
     
     .ingresoMensaje{
         width: 50vw;
+        left: 240px;
     }
 
     .mensajeTraducido{
-        width: 30vw;
-    }
-
-    .botones button{
-        width: 22vw;
+        /*width: 30vw;*/
+        width: 400px;
     }
 }
 
