@@ -3,7 +3,7 @@ var btnEncriptar = document.getElementById("btnEncriptar");
 var btnDesencriptar = document.getElementById("btnDesencriptar");
 var btnCopiar = document.getElementById("btnCopiar");
 
-/*DOM elements*/
+/*DOM elementos*/
 
 /*Textos*/
 var textoIngresado = document.getElementById("textareaMensaje");
@@ -98,8 +98,14 @@ function copiarTexto(){
     .catch(err => {
         console.error('Error durante el copiado: ', err);
     });
+
+    /*setTimeout(function(){
+        alert('Hola mundo');}, 5000);*/
 }
 
 btnEncriptar.addEventListener('click', encriptarTextoButton);
 btnDesencriptar.addEventListener('click', desencriptarTextoButton);
 btnCopiar.addEventListener('click', copiarTexto);
+
+/*Agregar regex para mayusculas y acentos*/
+/*Agregar cuadro flotante para indicar texto copiado al portapapeles (Opcional)*/
