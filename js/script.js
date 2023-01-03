@@ -46,3 +46,60 @@ function desencriptarTexto(texto){
 
     return nuevoTexto;
 }
+
+function encriptarTextoButton(){
+    if(!ComprobarMensajeVacio()){
+        var textoIngresado = document.getElementById("textareaMensaje").value;
+        var textoEncriptado = encriptarTexto(textoIngresado);
+        textoTraducido.style.display = "block";
+        textoTraducido.innerHTML = textoEncriptado;
+        mensajeError.style.display = "none";
+        mensajePrincipal.style.display = "none";
+        logo.style.display = "none";
+        btnCopiar.style.display = "block";
+    }
+    else{
+        alert("Debe ingresar un texto para encriptar/desencriptar!.");
+        mensajeError.style.display = "block";
+        mensajePrincipal.style.display = "block";
+        textoTraducido.style.display = "none";
+        btnCopiar.style.display = "none";
+    }
+}
+
+function desencriptarTextoButton(){
+    if(!ComprobarMensajeVacio()){
+        var textoIngresado = document.getElementById("textareaMensaje").value;
+        var textoEncriptado = desencriptarTexto(textoIngresado);
+        textoTraducido.style.display = "block";
+        textoTraducido.innerHTML = textoEncriptado;
+        mensajeError.style.display = "none";
+        mensajePrincipal.style.display = "none";
+        logo.style.display = "none";
+        btnCopiar.style.display = "block";
+    }
+    else{
+        alert("Debe ingresar un texto para encriptar/desencriptar!.");
+        mensajeError.style.display = "block";
+        mensajePrincipal.style.display = "block";
+        textoTraducido.style.display = "none";
+        btnCopiar.style.display = "none";
+    }
+}
+
+function copiarTexto(){
+    var texto = document.getElementById("textoTraducido").innerHTML;
+ 
+    navigator.clipboard.writeText(texto)
+    .then(() => {
+        console.log('Texto copiado en el portapapeles!');
+        console.log(texto);
+    })
+    .catch(err => {
+        console.error('Error durante el copiado: ', err);
+    });
+}
+
+btnEncriptar.addEventListener('click', encriptarTextoButton);
+btnDesencriptar.addEventListener('click', desencriptarTextoButton);
+btnCopiar.addEventListener('click', copiarTexto);
