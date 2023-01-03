@@ -100,7 +100,9 @@ function copiarTexto(){
     });
 
     mensajeCopiado.style.display = 'flex';
-    setTimeout(() => {mensajeCopiado.style.display = 'none';}, 1000 * 5);
+    /*bodyBackground.style.background = 'rgba(0, 0, 0, 0.2)';*/
+
+    setTimeout(() => {mensajeCopiado.style.display = 'none';}, 1000 * 2);
     
 }
 
