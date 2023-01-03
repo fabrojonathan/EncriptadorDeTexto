@@ -1,3 +1,4 @@
+var bodyBackground = document.body;
 /*DOM buttons*/
 var btnEncriptar = document.getElementById("btnEncriptar");
 var btnDesencriptar = document.getElementById("btnDesencriptar");
@@ -5,14 +6,13 @@ var btnCopiar = document.getElementById("btnCopiar");
 
 /*DOM elementos*/
 
-/*Textos*/
-var textoIngresado = document.getElementById("textareaMensaje");
-var textoTraducido = document.getElementById("textoTraducido");
-
 /*Logo, Mensajes informativos y de error*/
 var logo = document.getElementById("logoError");
 var mensajeError = document.getElementById("mensajeError");
 var mensajePrincipal = document.getElementById("mensajePrincipal");
+
+/*Mensaje copiado*/
+var mensajeCopiado = document.getElementById("mensajeCopiado");
 
 function ComprobarMensajeVacio(){
     var textoIngresado = document.getElementById("textareaMensaje").value;
@@ -99,8 +99,9 @@ function copiarTexto(){
         console.error('Error durante el copiado: ', err);
     });
 
-    /*setTimeout(function(){
-        alert('Hola mundo');}, 5000);*/
+    mensajeCopiado.style.display = 'flex';
+    setTimeout(() => {mensajeCopiado.style.display = 'none';}, 1000 * 5);
+    
 }
 
 btnEncriptar.addEventListener('click', encriptarTextoButton);
