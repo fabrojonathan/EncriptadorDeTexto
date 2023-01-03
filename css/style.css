@@ -154,9 +154,9 @@ textarea:focus{
 /* Mensaje copiado */
 
 .mensajeCopiado{
+    display: none;
     width: 200px;
     height: 120px;
-    display: flex;
     position: absolute;
 
     margin-left:auto;
