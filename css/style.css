@@ -154,7 +154,7 @@ textarea:focus{
 /* Mensaje copiado */
 
 .containerMensajeCopiado{
-    display: none;
+    visibility: hidden;
     position: absolute;
     background: linear-gradient(90deg, 
                                 rgba(0,0,0,0.4),
@@ -318,9 +318,9 @@ footer p{
 
 /*Animaciones */
 
-button{
+/*button{
     transition: 0.8s;
-}
+}*/
 
 .btnEncriptar:hover{
     transition: 0.5s;

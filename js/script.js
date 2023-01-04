@@ -99,10 +99,10 @@ function copiarTexto(){
         console.error('Error durante el copiado: ', err);
     });
 
-    mensajeCopiado.style.display = 'block';
+    mensajeCopiado.style.visibility = 'visible';
     /*bodyBackground.style.background = 'rgba(0, 0, 0, 0.2)';*/
 
-    setTimeout(() => {mensajeCopiado.style.display = 'none';}, 1000 * 2);
+    setTimeout(() => {mensajeCopiado.style.visibility = 'hidden';}, 1000 * 2);
     
 }
 
