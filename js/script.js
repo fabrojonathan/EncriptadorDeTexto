@@ -3,6 +3,7 @@ var bodyBackground = document.body;
 var btnEncriptar = document.getElementById("btnEncriptar");
 var btnDesencriptar = document.getElementById("btnDesencriptar");
 var btnCopiar = document.getElementById("btnCopiar");
+var btnOkMensajeCopiado = document.getElementById("btnOkMensajeCopiado");
 
 /*DOM elementos*/
 
@@ -109,6 +110,7 @@ function copiarTexto(){
 btnEncriptar.addEventListener('click', encriptarTextoButton);
 btnDesencriptar.addEventListener('click', desencriptarTextoButton);
 btnCopiar.addEventListener('click', copiarTexto);
+btnOkMensajeCopiado.addEventListener('click', () => { mensajeCopiado.style.visibility = 'hidden' });
 
 /*Agregar regex para mayusculas y acentos*/
 /*Agregar cuadro flotante para indicar texto copiado al portapapeles (Opcional)*/
