@@ -154,6 +154,7 @@ textarea:focus{
 /* Mensaje copiado */
 
 .containerMensajeCopiado{
+    display: none;
     position: absolute;
     background: linear-gradient(90deg, 
                                 rgba(0,0,0,0.4),
