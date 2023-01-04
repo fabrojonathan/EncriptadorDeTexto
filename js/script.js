@@ -79,6 +79,7 @@ function desencriptarTextoButton(){
         mensajePrincipal.style.display = "none";
         logo.style.display = "none";
         btnCopiar.style.display = "block";
+        btnCopiar.focus();
     }
     else{
         alert("Debe ingresar un texto para encriptar/desencriptar!.");
