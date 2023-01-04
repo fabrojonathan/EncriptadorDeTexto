@@ -92,6 +92,7 @@ function desencriptarTextoButton(){
 
 function copiarTexto(){
     var texto = document.getElementById("textoTraducido").innerHTML;
+    document.getElementById("textareaMensaje").value = texto;
  
     navigator.clipboard.writeText(texto)
     .then(() => {
