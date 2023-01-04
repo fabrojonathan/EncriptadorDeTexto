@@ -153,8 +153,20 @@ textarea:focus{
 
 /* Mensaje copiado */
 
+.containerMensajeCopiado{
+    position: absolute;
+    background: linear-gradient(90deg, 
+                                rgba(0,0,0,0.4),
+                                rgba(0,0,0,0.10)),
+                                rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
 .mensajeCopiado{
-    display: none;
+    display: flex;
     width: 200px;
     height: 120px;
     position: absolute;
