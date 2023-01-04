@@ -12,7 +12,7 @@ var mensajeError = document.getElementById("mensajeError");
 var mensajePrincipal = document.getElementById("mensajePrincipal");
 
 /*Mensaje copiado*/
-var mensajeCopiado = document.getElementById("mensajeCopiado");
+var mensajeCopiado = document.getElementById("containerMensajeCopiado");
 
 function ComprobarMensajeVacio(){
     var textoIngresado = document.getElementById("textareaMensaje").value;
@@ -99,7 +99,7 @@ function copiarTexto(){
         console.error('Error durante el copiado: ', err);
     });
 
-    mensajeCopiado.style.display = 'flex';
+    mensajeCopiado.style.display = 'block';
     /*bodyBackground.style.background = 'rgba(0, 0, 0, 0.2)';*/
 
     setTimeout(() => {mensajeCopiado.style.display = 'none';}, 1000 * 2);
