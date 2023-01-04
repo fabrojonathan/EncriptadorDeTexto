@@ -58,6 +58,7 @@ function encriptarTextoButton(){
         mensajePrincipal.style.display = "none";
         logo.style.display = "none";
         btnCopiar.style.display = "block";
+        btnCopiar.focus();
     }
     else{
         alert("Debe ingresar un texto para encriptar/desencriptar!.");
@@ -101,7 +102,6 @@ function copiarTexto(){
     });
 
     mensajeCopiado.style.visibility = 'visible';
-    /*bodyBackground.style.background = 'rgba(0, 0, 0, 0.2)';*/
 
     setTimeout(() => {mensajeCopiado.style.visibility = 'hidden';}, 1000 * 2);
     
@@ -113,4 +113,3 @@ btnCopiar.addEventListener('click', copiarTexto);
 btnOkMensajeCopiado.addEventListener('click', () => { mensajeCopiado.style.visibility = 'hidden' });
 
 /*Agregar regex para mayusculas y acentos*/
-/*Agregar cuadro flotante para indicar texto copiado al portapapeles (Opcional)*/
