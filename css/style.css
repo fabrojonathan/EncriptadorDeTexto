@@ -142,8 +142,11 @@ textarea:focus{
 }
 
 .textoTraducido{
+    display: none;
     width: 80%;
-    height: 40vh;
+    height: 60vh;
+    margin-bottom: 50px;
+
     background-color: #FFFFFF;
     font-family: 'Inter';
     font-style: normal;
