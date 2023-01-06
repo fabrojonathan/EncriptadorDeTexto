@@ -235,7 +235,7 @@ footer {
     display: flex;
     flex-direction: column;
 
-    background: linear-gradient(105deg, #0a3871, #43546a, #3b4e64);
+    background: linear-gradient(105deg, #275c9e, #062c5a, #0a3871);
     align-items: center;
     justify-content: center;
 }
