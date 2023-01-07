@@ -238,7 +238,7 @@ footer {
     display: flex;
     flex-direction: column;
 
-    background: linear-gradient(105deg, #275c9e, #062c5a, #0a3871);
+    background: linear-gradient(105deg, #1f37a1, #103869, #2d1b6e);
     align-items: center;
     justify-content: center;
 }
@@ -270,6 +270,11 @@ footer p a{
 .enlaces img{
     width: 35px;
     height: 35px;
+}
+
+.enlaces a:hover{
+    transition: 1.2s;
+    transform: rotateY(360deg) scale(1.2);
 }
 
 
@@ -368,16 +373,13 @@ footer p a{
 
 /*Animaciones */
 
-/*button{
-    transition: 0.8s;
-}*/
-
 .btnEncriptar:hover{
     transition: 0.5s;
     transform: scale(1.02);
     background: #1d5dac;
     border-radius: 50deg;
     font-size: 115%;
+    cursor: pointer;
 }
 
 .btnDesencriptar:hover ,.btnCopiar:hover, .btnOkMensajeCopiado:hover{
@@ -387,8 +389,10 @@ footer p a{
     border-radius: 50deg;
     color:#010d1b;
     font-size: 115%;
+    cursor: pointer;
 }
 
 .btnOkMensajeCopiado:hover{
     transition: 0s;
+    cursor: pointer;
 }
