@@ -256,6 +256,10 @@ footer p a{
     color:#ffffff;
 }
 
+footer p a:hover{
+    font-weight: bold;
+}
+
 .enlaces{
     display: flex;
     flex-direction: column;
