@@ -142,10 +142,9 @@ function desencriptarTextoButton(){
 function copiarTexto(){
     var texto = document.getElementById("textoTraducido").innerHTML;
     document.getElementById("textareaMensaje").value = texto;
- 
+    
     navigator.clipboard.writeText(texto)
     mensajeCopiado.style.visibility = 'visible';
-
     setTimeout(() => {mensajeCopiado.style.visibility = 'hidden';}, 1000 * 2);
 }
 
