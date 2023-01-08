@@ -254,6 +254,7 @@ footer {
 }
 
 footer p{
+    width: 100%;
     text-align: center;
     font-style: italic;
     font-family: 'Tajawal', sans-serif;
