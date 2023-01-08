@@ -107,6 +107,7 @@ function encriptarTextoButton(){
         mensajePrincipal.style.display = "block";
         textoTraducido.style.display = "none";
         btnCopiar.style.display = "none";
+        cambiarEstiloDivInformacionBase();
     }
 }
 
@@ -135,6 +136,7 @@ function desencriptarTextoButton(){
         mensajePrincipal.style.display = "block";
         textoTraducido.style.display = "none";
         btnCopiar.style.display = "none";
+        cambiarEstiloDivInformacionBase();
     }
 }
 
