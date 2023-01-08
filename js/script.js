@@ -114,13 +114,12 @@ function desencriptarTextoButton(){
     if(!ComprobarMensajeVacio()){
         var textoIngresado = document.getElementById("textareaMensaje").value;
         if(comprobarExpresiones(textoIngresado)){
-            let textInformacion = document.getElementById("textInformacion");
-
-            textInformacion.style.color = "#E51818";
-            textInformacion.style.fontWeight = "bold";
-            alert("Solo se admiten letras minúsculas y sin acentos! Reintente");
+            cambiarEstiloDivInformacionRojo();
             return;
-        }  
+        }
+        else{
+            cambiarEstiloDivInformacionBase();
+        }
         var textoEncriptado = desencriptarTexto(textoIngresado);
         textoTraducido.style.display = "block";
         textoTraducido.innerHTML = textoEncriptado;
@@ -141,14 +140,19 @@ function desencriptarTextoButton(){
 
 function copiarTexto(){
     var texto = document.getElementById("textoTraducido").innerHTML;
-    document.getElementById("textareaMensaje").value = texto;
+    var areaIngresoTexto = document.getElementById("textareaMensaje");
     
     navigator.clipboard.writeText(texto)
     mensajeCopiado.style.visibility = 'visible';
-    setTimeout(() => {mensajeCopiado.style.visibility = 'hidden';}, 1000 * 2);
+    areaIngresoTexto.value = texto;
+    setTimeout(() => { mensajeCopiado.style.visibility = 'hidden';
+                       areaIngresoTexto.focus();
+                      }, 1000 * 2);
 }
 
 btnEncriptar.addEventListener('click', encriptarTextoButton);
 btnDesencriptar.addEventListener('click', desencriptarTextoButton);
 btnCopiar.addEventListener('click', copiarTexto);
-btnOkMensajeCopiado.addEventListener('click', () => { mensajeCopiado.style.visibility = 'hidden' });
+btnOkMensajeCopiado.addEventListener('click', () => { 
+                                                    mensajeCopiado.style.visibility = 'hidden' 
+                                                    document.getElementById("textareaMensaje").focus();});
