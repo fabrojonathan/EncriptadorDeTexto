@@ -36,6 +36,7 @@ textarea{
     font-size: 32px;
     font-weight: 400;
     line-height: 48px;
+    resize: none;
 }
 
 textarea::placeholder{
