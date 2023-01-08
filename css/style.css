@@ -155,8 +155,8 @@ textarea:focus{
 .textoTraducido{
     display: none;
     width: 80%;
-    height: 60vh;
-    margin-bottom: 50px;
+    height: 50vh;
+    margin-bottom: 30px;
 
     background-color: #FFFFFF;
     font-family: 'Inter';
@@ -311,7 +311,7 @@ footer p a:hover{
 
     .mensajeTraducido{
         width: 97%;
-        height: 50vh;
+        height: 70vh;
     }
 
     .enlaces{
@@ -343,6 +343,10 @@ footer p a:hover{
         width: 30vw;
         height: 80vh;
         margin: 40px 40px;
+    }
+
+    .textoTraducido{
+        margin-bottom: 130px;
     }
 
     .logoError{
