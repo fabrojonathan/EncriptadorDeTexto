@@ -254,7 +254,6 @@ footer {
 }
 
 footer p{
-    width: 100%;
     text-align: center;
     font-style: italic;
     font-family: 'Tajawal', sans-serif;
@@ -361,7 +360,6 @@ footer p a:hover{
     footer{
         position: relative;
         z-index: 2;
-        width: 100%;
         bottom: 0;
         margin: 90vh auto 0;
     }
