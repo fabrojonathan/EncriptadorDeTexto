@@ -16,7 +16,7 @@ var mensajePrincipal = document.getElementById("mensajePrincipal");
 var mensajeCopiado = document.getElementById("containerMensajeCopiado");
 
 function comprobarExpresiones(texto){
-    const expression = /[A-Z]|á|é|í|ó|ú/g;
+    const expression = /[A-Z]|á|é|í|ó|ú|\W|_/g;
     const regex = new RegExp(expression);
     return regex.test(texto);
 }
@@ -36,7 +36,7 @@ function cambiarEstiloDivInformacionRojo(){
     textInformacion.style.color = "#BF0808";
     textInformacion.style.fontWeight = "bold";
 
-    alert("Solo se admiten letras minúsculas y sin acentos! Reintente");
+    alert("No se admiten letras mayusculas, acentos y/o caracteres especiales! Reintente");
     document.getElementById('textoTraducido').onfocus();
 }
 
