@@ -22,8 +22,6 @@ main {
     margin: 0 16px;
 }
 
-
-
 /* Section Ingreso de Mensaje */
 
 textarea{
@@ -242,7 +240,6 @@ textarea:focus{
 
 footer {
     position: relative;
-    width: 100%;
     height: auto;
     padding: 15px;
     bottom: 0;
@@ -285,11 +282,6 @@ footer p a:hover{
 .enlaces img{
     width: 35px;
     height: 35px;
-}
-
-.enlaces a:hover{
-    transition: 1.2s;
-    transform: rotateY(360deg) scale(1.2);
 }
 
 
@@ -410,4 +402,9 @@ footer p a:hover{
 .btnOkMensajeCopiado:hover{
     transition: 0s;
     cursor: pointer;
+}
+
+.enlaces a:hover{
+    transition: 1.2s;
+    transform: rotateY(360deg) scale(1.2);
 }
