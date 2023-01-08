@@ -49,6 +49,15 @@ textarea:focus{
     outline: none;
 }
 
+.signoExclamacion, .signoExclamacionRojo{
+    width: 16px;
+    height: 16px;
+}
+
+.signoExclamacionRojo{
+    display: none;
+}
+
 .informacion {
     display: flex;
     align-items: center;

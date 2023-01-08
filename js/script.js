@@ -15,9 +15,37 @@ var mensajePrincipal = document.getElementById("mensajePrincipal");
 /*Mensaje copiado*/
 var mensajeCopiado = document.getElementById("containerMensajeCopiado");
 
+function comprobarExpresiones(texto){
+    const expression = /[A-Z]|á|é|í|ó|ú/g;
+    const regex = new RegExp(expression);
+    return regex.test(texto);
+}
+
 function ComprobarMensajeVacio(){
     var textoIngresado = document.getElementById("textareaMensaje").value;
     return (textoIngresado == '');
+}
+
+function cambiarEstiloDivInformacionRojo(){
+    let textInformacion = document.getElementById("textInformacion");
+    let signoExclamacion = document.getElementById("signoExclamacion");
+    let signoExclamacionRojo = document.getElementById("signoExclamacionRojo");
+
+    signoExclamacion.style.display = "none";
+    signoExclamacionRojo.style.display = "inline-block";
+    textInformacion.style.color = "#BF0808";
+    textInformacion.style.fontWeight = "bold";
+}
+
+function cambiarEstiloDivInformacionBase(){
+    let textInformacion = document.getElementById("textInformacion");
+    let signoExclamacion = document.getElementById("signoExclamacion");
+    let signoExclamacionRojo = document.getElementById("signoExclamacionRojo");
+
+    signoExclamacion.style.display = "inline-block";
+    signoExclamacionRojo.style.display = "none";
+    textInformacion.style.color = "#495057";
+    textInformacion.style.fontWeight = "normal";
 }
 
 function encriptarTexto(texto){
@@ -51,6 +79,17 @@ function desencriptarTexto(texto){
 function encriptarTextoButton(){
     if(!ComprobarMensajeVacio()){
         var textoIngresado = document.getElementById("textareaMensaje").value;
+       
+        if(comprobarExpresiones(textoIngresado)){
+            cambiarEstiloDivInformacionRojo();
+            alert("Solo se admiten letras minúsculas y sin acentos! Reintente");
+            return;
+        }
+        else{
+            cambiarEstiloDivInformacionBase();
+        }
+
+
         var textoEncriptado = encriptarTexto(textoIngresado);
         textoTraducido.style.display = "block";
         textoTraducido.innerHTML = textoEncriptado;
@@ -72,6 +111,14 @@ function encriptarTextoButton(){
 function desencriptarTextoButton(){
     if(!ComprobarMensajeVacio()){
         var textoIngresado = document.getElementById("textareaMensaje").value;
+        if(comprobarExpresiones(textoIngresado)){
+            let textInformacion = document.getElementById("textInformacion");
+
+            textInformacion.style.color = "#E51818";
+            textInformacion.style.fontWeight = "bold";
+            alert("Solo se admiten letras minúsculas y sin acentos! Reintente");
+            return;
+        }  
         var textoEncriptado = desencriptarTexto(textoIngresado);
         textoTraducido.style.display = "block";
         textoTraducido.innerHTML = textoEncriptado;
@@ -113,5 +160,3 @@ btnEncriptar.addEventListener('click', encriptarTextoButton);
 btnDesencriptar.addEventListener('click', desencriptarTextoButton);
 btnCopiar.addEventListener('click', copiarTexto);
 btnOkMensajeCopiado.addEventListener('click', () => { mensajeCopiado.style.visibility = 'hidden' });
-
-/*Agregar regex para mayusculas y acentos*/
