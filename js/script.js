@@ -12,7 +12,7 @@ var logo = document.getElementById("logoError");
 var mensajeError = document.getElementById("mensajeError");
 var mensajePrincipal = document.getElementById("mensajePrincipal");
 
-/*Mensaje copiado*/
+/*Mensaje de elemento copiado*/
 var mensajeCopiado = document.getElementById("containerMensajeCopiado");
 
 function comprobarExpresiones(texto){
@@ -35,6 +35,9 @@ function cambiarEstiloDivInformacionRojo(){
     signoExclamacionRojo.style.display = "inline-block";
     textInformacion.style.color = "#BF0808";
     textInformacion.style.fontWeight = "bold";
+
+    alert("Solo se admiten letras minúsculas y sin acentos! Reintente");
+    document.getElementById('textoTraducido').onfocus();
 }
 
 function cambiarEstiloDivInformacionBase(){
@@ -82,7 +85,6 @@ function encriptarTextoButton(){
        
         if(comprobarExpresiones(textoIngresado)){
             cambiarEstiloDivInformacionRojo();
-            alert("Solo se admiten letras minúsculas y sin acentos! Reintente");
             return;
         }
         else{
@@ -93,11 +95,11 @@ function encriptarTextoButton(){
         var textoEncriptado = encriptarTexto(textoIngresado);
         textoTraducido.style.display = "block";
         textoTraducido.innerHTML = textoEncriptado;
+        textoTraducido.focus();
         mensajeError.style.display = "none";
         mensajePrincipal.style.display = "none";
         logo.style.display = "none";
         btnCopiar.style.display = "block";
-        btnCopiar.focus();
     }
     else{
         alert("Debe ingresar un texto para encriptar/desencriptar!.");
@@ -122,11 +124,11 @@ function desencriptarTextoButton(){
         var textoEncriptado = desencriptarTexto(textoIngresado);
         textoTraducido.style.display = "block";
         textoTraducido.innerHTML = textoEncriptado;
+        textoTraducido.focus();
         mensajeError.style.display = "none";
         mensajePrincipal.style.display = "none";
         logo.style.display = "none";
         btnCopiar.style.display = "block";
-        btnCopiar.focus();
     }
     else{
         alert("Debe ingresar un texto para encriptar/desencriptar!.");
@@ -142,18 +144,9 @@ function copiarTexto(){
     document.getElementById("textareaMensaje").value = texto;
  
     navigator.clipboard.writeText(texto)
-    .then(() => {
-        console.log('Texto copiado en el portapapeles!');
-        console.log(texto);
-    })
-    .catch(err => {
-        console.error('Error durante el copiado: ', err);
-    });
-
     mensajeCopiado.style.visibility = 'visible';
 
     setTimeout(() => {mensajeCopiado.style.visibility = 'hidden';}, 1000 * 2);
-    
 }
 
 btnEncriptar.addEventListener('click', encriptarTextoButton);
