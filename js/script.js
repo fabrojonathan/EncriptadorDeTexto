@@ -16,7 +16,7 @@ var mensajePrincipal = document.getElementById("mensajePrincipal");
 var mensajeCopiado = document.getElementById("containerMensajeCopiado");
 
 function comprobarExpresiones(texto){
-    const expression = /[A-Z]|á|é|í|ó|ú|\W|_/g;
+    const expression = /[A-Z]|á|é|í|ó|ú|[!"#$%&/()=?¡*+-.,-_|°@¿;:\~`^¬]/g;
     const regex = new RegExp(expression);
     return regex.test(texto);
 }
