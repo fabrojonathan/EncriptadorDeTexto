@@ -27,9 +27,9 @@ Además:
 - No deben ser utilizados letras con acentos ni caracteres especiales
 - Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 
-Por ejemplo:
-"gato" => "gaitober"<br>
-gaitober" => "gato"
+Por ejemplo:<br>
+ "gato" => "gaitober"<br>
+ "gaitober" => "gato"
 
 - La página debe tener campos para
 inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.<br>
